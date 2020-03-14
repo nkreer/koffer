@@ -45,16 +45,14 @@ function setStep(step){
 }
 
 function getRandomItem(){
-    return selector.itemList[Math.floor((Math.random() * selector.itemList.length))];
+    return selector.itemList[Math.floor((Math.random() * (selector.itemList.length - 1)))];
 }
 
 function randomButtonEntries(){
     // Get new items
     var newItems = [];
     // Insert correct item at random position if needed
-    var randomPosition = Math.floor((Math.random() * selector.difficulty - 1));
-    
-    console.log(randomPosition);
+    var randomPosition = Math.floor(Math.random() * selector.difficulty);
 
     for(i = 0; i < selector.difficulty; i++){
         // Validate that we really need the correct answer
