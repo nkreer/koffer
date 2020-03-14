@@ -1,7 +1,9 @@
 // Get the app view to work with later
 var appView = document.getElementById("app");
+var loseView = document.getElementById("lose");
 var roundView = document.getElementById("round");
 var stepView = document.getElementById("step");
+var finalScoreView = document.getElementById("score");
 
 var selector = {}
 
@@ -17,6 +19,7 @@ function initialize(){
 
     roundView.innerHTML = 1;
     stepView.innerHTML = 1;
+    loseView.className = "hidden";
 
     // Prepare the game with every necessary setting
     // TODO: User settings
@@ -32,6 +35,7 @@ function getRound(){
 
 function setRound(round){
     roundView.innerHTML = round + 1;
+    finalScoreView.innerHTML = round + 1;
     selector.round = round;
 }
 
@@ -127,10 +131,8 @@ function round(event){
             // Reset the buttons and give them new items
             randomButtonEntries();
         } else {
-            // Incorrect
-            alert("Incorrect!");
-            // restart
-            initialize();
+            // Show the lose view
+            loseView.className = "";
         }
     }
 }
