@@ -123,6 +123,8 @@ function round(event){
         setStep(0);
         // Reset the buttons and give them new items
         randomButtonEntries();
+
+        newAudio.play();
     } else {
         // Validate that entry is correct
         if(text === selector.selected[selector.currentStep]){
@@ -130,9 +132,13 @@ function round(event){
             setStep(getStep() + 1);
             // Reset the buttons and give them new items
             randomButtonEntries();
+
+            selectAudio.play();
         } else {
             // Show the lose view
             loseView.className = "";
+
+            loseAudio.play();
         }
     }
 }
