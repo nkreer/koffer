@@ -1,0 +1,12 @@
+{
+  "name": "koffer",
+  "icons": [
+    {
+      "src": "icon.png",
+      "type": "image/png",
+      "density": 4
+    }
+  ],
+  "start_url": "index.html",
+  "display": "standalone"
+}
