@@ -31,6 +31,8 @@ function initialize(){
     var selected = document.getElementById("itemPackSelect").value;
     if(selected === "food"){
         var items = food;
+    } else if(selected === "animals"){
+        var items = animals;
     } else {
         // Travel pack is the default
         var items = travel;
