@@ -1,0 +1,43 @@
+/*
+Food items
+*/
+
+var food = [
+    "Apple 🍎",
+    "Pear 🍐",
+    "Orange 🍊",
+    "Lemon 🍋",
+    "Banana 🍌",
+    "Melon 🍉",
+    "Blueberries 🍇",
+    "Strawberry 🍓",
+    "Cherries 🍒",
+    "Eggplant 🍆",
+    "Chilli 🌶",
+    "Corn 🌽",
+    "Bread 🍞",
+    "Cheese 🧀",
+    "Chicken 🍗",
+    "Egg 🍳",
+    "Burger 🍔",
+    "Fries 🍟",
+    "Hotdog 🌭",
+    "Pizza 🍕",
+    "Pasta 🍝",
+    "Taco 🌮",
+    "Ramen 🍜",
+    "Sushi 🍣",
+    "Rice 🍚",
+    "Ice cream 🍦",
+    "Cake 🍰",
+    "Donut 🍩",
+    "Chocolate 🍫",
+    "Popcorn 🍿",
+    "Cookie 🍪",
+    "Beer 🍺",
+    "Wine 🍷",
+    "Cocktail 🍹",
+    "Champaign 🍾",
+    "Coffee ☕",
+    "Tea 🍵"
+];

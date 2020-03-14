@@ -5,6 +5,9 @@ var roundView = document.getElementById("round");
 var stepView = document.getElementById("step");
 var finalScoreView = document.getElementById("score");
 
+// Config
+var configView = document.getElementById("config");
+
 var selector = {}
 
 function initialize(){
@@ -20,9 +23,19 @@ function initialize(){
     roundView.innerHTML = 1;
     stepView.innerHTML = 1;
     loseView.className = "hidden";
+    configView.className = "hidden";
 
     // Prepare the game with every necessary setting
-    // TODO: User settings
+
+    // Get the selected item pack
+    var selected = document.getElementById("itemPackSelect").value;
+    if(selected === "food"){
+        var items = food;
+    } else {
+        // Travel pack is the default
+        var items = travel;
+    }
+
     prepareGame(
         definitions.difficulty.medium, 
         [items]
@@ -46,6 +59,14 @@ function getStep(){
 function setStep(step){
     stepView.innerHTML = step + 1;
     selector.currentStep = step;
+}
+
+function showConfig(){
+    // Only show config in first round
+    // Otherwise, the player would lose their state 
+    if(getRound() === 0){
+        configView.className = "";
+    }
 }
 
 function getRandomItem(){

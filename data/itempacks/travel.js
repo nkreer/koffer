@@ -1,9 +1,8 @@
 /*
-Default item pack
 Travel necessities
 */
 
-var items = [
+var travel = [
     "t-shirt 👕",
     "jeans 👖",
     "toothbrush 🦷",

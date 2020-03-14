@@ -3,7 +3,7 @@
 <head>
     <title>koffer</title>
     <meta charset="utf-8">
-    
+
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
 
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -20,7 +20,16 @@
         <span class="score" id="score">NaN</span>
     </div>
 
-    <h1>koffer</h1>
+    <div id="config" class="hidden" onclick="initialize()">
+        <p>Options</p>
+        <label for="itemPackSelect">Item pack</label>
+        <select id="itemPackSelect">
+            <option value="travel">Travel ☂📕📷</option>
+            <option value="food">Food 🍎🍔🍩</option>
+        </select>
+    </div>
+
+    <h1 onclick="showConfig();">koffer</h1>
 
     <div id="info">
         Round: <span id="round"></span> | Step: <span id="step"></span>
@@ -34,7 +43,8 @@
     <script type="text/javascript" src="js/audioController.js"></script>
 
     <!-- Item packs -->
-    <script type="text/javascript" src="data/itempacks/default.js"></script>
+    <script type="text/javascript" src="data/itempacks/travel.js"></script>
+    <script type="text/javascript" src="data/itempacks/food.js"></script>
 
     <script type="text/javascript" src="js/app.js"></script>
 
