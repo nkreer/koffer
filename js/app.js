@@ -69,9 +69,9 @@ function randomButtonEntries(){
 
         // Show when this is a new user selection
         if(getStep() === getRound()){
-            button.style = "color: white; background-color: black;";
+            button.style = "transition: 0.5s; color: white; background-color: #111;";
         } else {
-            button.style = "";
+            button.style = "transition: 0.5s;";
         }
     }
 }
