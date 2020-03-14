@@ -53,12 +53,20 @@ h1 {
 
 select {
     padding: 2%;
-    margin-top: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
     display: block;
     width: 100%;
     font-size: 3rem;
-    background-color: #000;
+    background-color: #111;
     color: #fff;
+}
+
+button {
+    font-size: 2rem;
+    background-color: #111;
+    color: #fff;
+    padding: 3%;
 }
 
 #app button {

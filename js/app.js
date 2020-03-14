@@ -38,8 +38,10 @@ function initialize(){
         var items = travel;
     }
 
+    var difficulty = document.getElementById("difficulty").value;
+
     prepareGame(
-        definitions.difficulty.medium, 
+        difficulty, 
         [items]
     );
 }

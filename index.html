@@ -20,7 +20,7 @@
         <span class="score" id="score">NaN</span>
     </div>
 
-    <div id="config" class="hidden" onclick="initialize()">
+    <div id="config" class="hidden">
         <p>Options</p>
         <label for="itemPackSelect">Item pack</label>
         <select id="itemPackSelect">
@@ -28,6 +28,13 @@
             <option value="food">Food 🍎🍔🍩</option>
             <option value="animals">Animals 🐶🐥🐝</option>
         </select>
+        <label for="difficulty">Difficulty</label>
+        <select id="difficulty">
+            <option value="2">Easy 🐞</option>
+            <option value="4" selected="selected">Medium 🐘</option>
+            <option value="6">Hard 🐵</option>
+        </select>
+        <button onclick="initialize()">Play</button>
     </div>
 
     <h1 onclick="showConfig();">koffer</h1>
