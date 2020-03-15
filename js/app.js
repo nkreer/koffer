@@ -40,7 +40,11 @@ function initialize(){
         var items = food;
     } else if(selected === "animals"){
         var items = animals;
-    } else {
+    } else if(selected === "sports"){
+        var items = sports;
+    }else if(selected === "vehicles"){
+        var items = vehicles;
+    }  else {
         // Travel pack is the default
         var items = travel;
     }
