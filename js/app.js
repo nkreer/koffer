@@ -10,6 +10,12 @@ var configView = document.getElementById("config");
 
 var selector = {}
 
+function hideGame(hidden){
+    appView.className = hidden;
+    document.getElementById("info").className = hidden;
+    document.getElementById("optionsOpener").className = hidden;
+}
+
 function initialize(){
     selector = {
         buttons: [],
@@ -22,6 +28,7 @@ function initialize(){
 
     roundView.innerHTML = 1;
     stepView.innerHTML = 1;
+    hideGame(""); // Un-hide
     loseView.className = "hidden";
     configView.className = "hidden";
 
@@ -65,13 +72,23 @@ function setStep(step){
     selector.currentStep = step;
 }
 
+// Functions to show the user config
+// Keyboard support
+document.getElementById("optionsOpener").addEventListener("keydown", function(event){
+    if(event.keyCode === 13){
+        showConfig();
+    }
+});
+
 function showConfig(){
     // Only show config in first round
     // Otherwise, the player would lose their state 
     if(getRound() === 0){
         configView.className = "";
+        hideGame("hidden");
     }
 }
+
 
 function getRandomItem(){
     return selector.itemList[Math.floor((Math.random() * (selector.itemList.length - 1)))];
@@ -168,8 +185,9 @@ function round(event){
             selectAudio.play();
         } else {
             // Show the lose view
+            hideGame("hidden");
             loseView.className = "";
-
+            
             loseAudio.play();
         }
     }

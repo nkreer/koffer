@@ -15,12 +15,12 @@
 </head>
 <body>
 
-    <div id="lose" class="hidden" onclick="initialize()">
+    <div id="lose" class="hidden" onclick="initialize()"> 
         <p>you lose</p>
         <span class="score" id="score">NaN</span>
     </div>
 
-    <div id="config" class="hidden">
+    <div id="config" class="hidden" aria-live="assertive">
         <p>Options</p>
         <label for="itemPackSelect">Item pack</label>
         <select id="itemPackSelect">
@@ -37,7 +37,7 @@
         <button onclick="initialize()">Play</button>
     </div>
 
-    <h1 onclick="showConfig();">koffer</h1>
+    <h1 onclick="showConfig();" role="button" aria-label="koffer game settings" id="optionsOpener" tabindex="0">koffer</h1>
 
     <div id="info">
         Round: <span id="round"></span> | Step: <span id="step"></span>
