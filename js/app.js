@@ -96,6 +96,13 @@ function randomButtonEntries(){
         var button = selector.buttons[btn];
         button.innerHTML = newItems[btn];
 
+        // Generate an accessible label for the buttons
+        // i.e. remove the emoji
+        var accessibleLabel = newItems[btn].split(" ");
+        accessibleLabel.pop();
+        accessibleLabel = accessibleLabel.join(" ");
+        button.setAttribute("aria-label", accessibleLabel);
+
         // Show when this is a new user selection
         if(getStep() === getRound()){
             button.style = "transition: 0.5s; color: white; background-color: #111;";
