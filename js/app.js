@@ -126,6 +126,7 @@ function randomButtonEntries(){
 
         // Show when this is a new user selection
         if(getStep() === getRound()){
+            stopCountdown(); // This round doesn't need a countdown
             button.style = "transition: 0.5s; color: white; background-color: #111;";
         } else {
             button.style = "transition: 0.5s;";
@@ -167,6 +168,11 @@ function prepareGame(difficulty, itemList){
 
 function round(event){
     var text = event.innerHTML;
+    startCountdown(Math.floor(20 / selector.difficulty), function(){
+        hideGame("hidden");
+        loseView.className = "";
+        loseAudio.play();
+    });
     // Check if we are at the end of a round and this is a new user selection
     if(selector.round === selector.currentStep){
         // Add to selected
